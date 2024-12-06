@@ -1,0 +1,38 @@
+{
+  "builds": [
+    {
+      "src": "**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/style/(.*)",
+      "dest": "/style/$1"
+    },
+    {
+      "src": "/scripts/(.*)",
+      "dest": "/scripts/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/images/$1"
+    },
+    {
+      "src": "/(.*)\\.(?:js|css|jpg|jpeg|png|gif|ico|svg|ttf|woff|woff2)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/case-select.html",
+      "dest": "/case-select.html"
+    },
+    {
+      "src": "/game.html",
+      "dest": "/game.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+} 

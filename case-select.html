@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>儿童侦探 - 关卡选择</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/case-select.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <button class="nav-button" onclick="window.location.href='index.html'" title="返回首页">
+            <img src="images/icons/home.svg" alt="首页">
+        </button>
+    </div>
+    <div class="case-select-container">
+        <header>
+            <h1>选择调查案件</h1>
+            <p class="subtitle">点击案件开始你的侦探之旅</p>
+        </header>
+        
+        <main class="case-list">
+            <!-- 案件卡片由 JS 动态生成 -->
+        </main>
+
+        <template id="case-template">
+            <div class="case-item">
+                <div class="case-cover">
+                    <img src="" alt="案件封面">
+                    <div class="case-status"></div>
+                </div>
+                <div class="case-info">
+                    <h2 class="case-title"></h2>
+                    <p class="case-description"></p>
+                    <div class="case-progress">
+                        <div class="progress-bar"></div>
+                        <span class="progress-text"></span>
+                    </div>
+                    <button class="start-btn"></button>
+                </div>
+            </div>
+        </template>
+    </div>
+
+    <script src="eventBus.js"></script>
+    <script src="caseManager.js"></script>
+    <script src="case-select.js"></script>
+</body>
+</html> 

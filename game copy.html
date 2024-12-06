@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>神秘的保健室 - 儿童侦探游戏</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/game.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        #game-container {
+            max-width: none;
+            width: 100%;
+            margin: 0;
+            height: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="scene-container">
+            <div id="scene-description"></div>
+            <div id="interactive-items"></div>
+        </div>
+        
+        <div id="sidebar">
+            <div id="clues-list">
+                <div class="clues-header">
+                    <h3>已收集线索</h3>
+                    <button id="open-combination" class="action-button">组合线索</button>
+                </div>
+                <div class="clues-container"></div>
+            </div>
+            <div id="dialog-history">
+                <h3>对话记录</h3>
+            </div>
+        </div>
+        
+        <div id="dialog-box" class="hidden"></div>
+        
+        <div id="navigation-area">
+            <h3>可前往的位置</h3>
+            <div id="available-exits"></div>
+        </div>
+        
+        <div id="clue-combination-area" class="hidden">
+            <div class="combination-header">
+                <h3>线索组合</h3>
+                <button class="close-button">&times;</button>
+            </div>
+            <div class="combination-content">
+                <div class="selected-clues">
+                    <div class="clue-slot" data-slot="1">
+                        <span class="slot-hint">选择第一条线索</span>
+                    </div>
+                    <div class="plus-sign">+</div>
+                    <div class="clue-slot" data-slot="2">
+                        <span class="slot-hint">选择第二条线索</span>
+                    </div>
+                </div>
+                <button id="combine-clues" disabled>组合线索</button>
+            </div>
+            <div class="available-clues">
+                <h4>可用线索</h4>
+                <div class="clues-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/core/engine.js" type="module"></script>
+</body>
+</html> 
